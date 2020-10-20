@@ -1,0 +1,139 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+ BARVY
+ sede pozadi      #e5e5e5
+ svetle fialova   #48418e
+ tmave fialova    #25133d
+
+ POUZITE PISMO
+ Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
+ https://fonts.google.com/specimen/Roboto
+*/
+
+body {
+    padding: 0;
+    margin: 100px;
+    width: 1000px;
+    height: auto;
+    background-color: #e5e5e5;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.obal {
+    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+.menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.lista{
+    flex-basis: 100%;
+    background-color: white;
+}
+
+.menu li{
+    flex-basis: auto;
+    text-decoration: none;
+    list-style: none;
+    flex-direction: row;
+    background-color: white;
+    padding: 10px;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover{
+    background-color:#48418e;
+    color: white;
+}
+
+.banner{
+    position: relative;
+    min-height: 450px;
+    background-image: url(images/pozadi.jpg);
+    background-size: cover;
+    padding: 30px;
+    color: white;
+}
+
+.telefon{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.nadpis{
+    font-weight: 400;
+    font-size: 90px;
+    margin: 0;
+}
+
+.slogan{
+    font-weight:300;
+    font-size: 36px;
+    margin: 0;
+}
+
+.odkazy{
+    margin-top: 50px;
+}
+
+.odkazy a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.odkazy a:hover{
+    background-color:#48418e;
+}
+
+.sloupce{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.sloupce img{
+    height: 100px;
+    width: 100px;
+}
+.prvni,
+.druhy,
+.treti{
+    padding: 50px;
+    flex-basis: 33.333%;
+    text-align: center;
+}
+
+.paticka{
+    padding: 5px;
+    color: white;
+    background-color:#48418e;
+    text-align: center;
+}
+
+.paticka p{
+    margin: 0;
+}
